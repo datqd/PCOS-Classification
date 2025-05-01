@@ -10,24 +10,26 @@
 
 ## Summary of Workdone
 
-Include only the sections that are relevant an appropriate.
-
 ### Data
 
 * Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+  * Type: CSV file with 4 quantitative variables, 1 categorical variable, and the target variable of PCOS diagnosis
+  * Size: 1000 rows and 6 features
+  * Instances (Train, Test, Validation Split): 600 patients for training, 200 for testing, 200 for validation
 
 #### Preprocessing / Clean up
 
-* Describe any manipulations you performed to the data.
+* No missing values or duplicates were detected
+* All categorical variables were already encoded
+* The only change done was scaling all of the features using the StandardScaler
 
 #### Data Visualization
-
-Show a few visualization of the data and say a few words about what you see.
+![pcosfeatures](https://github.com/user-attachments/assets/a23054ca-0896-43aa-8280-6e839e6165a9)
+![pcoshistogram](https://github.com/user-attachments/assets/a4dc1345-d638-4de9-81f6-d7d9be778f4b)
+From the visualizations, we can observe a few things:
+* Based on the histograms, all of the features are fairly uniform without any skewing
+* There's a potential issue with an imbalance between the classes in the PCOS diagnosis feature
+* Based on the boxplots, it appears that there aren't any outliers in any of the features
 
 ### Problem Formulation
 
