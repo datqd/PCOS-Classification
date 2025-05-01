@@ -2,8 +2,7 @@
 
 # PCOS Diagnosis Machine Learning
 
-* **One Sentence Summary** Ex: This repository holds an attempt to apply LSTMs to Stock Market using data from
-"Get Rich" Kaggle challenge (provide link). 
+* This repository holds an attempt to apply a KNN Classifier to correctly diagnose PCOS using data from the "PCOS Diagnosis Dataset" Kaggle challenge (https://www.kaggle.com/datasets/samikshadalvi/pcos-diagnosis-dataset?resource=download).
 
 ## Overview
 
