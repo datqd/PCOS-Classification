@@ -46,75 +46,98 @@ Hyperparameters:
 
 ### Training
 
-* Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+Environment:
+* Python (Both Jupyter Notebook and Google Collab)
+* Libraries Used: pandas, numpy, matplotlib, seaborn, scikit-learn
+
+Training Time:
+* Very short due to size of dataset and simplicity of the model (a few seconds)
+
+Stopping Training:
+* Training was so quick, there was no need to intentionally stop it
+
+Difficulties:
+* The effectiveness of the KNN model is derived from the distance between data points, so without scaling the model performs very poorly on the dataset. This was solved by ensuring all features were scaled properly before training the model.
 
 ### Performance Comparison
 
-* Clearly define the key performance metric(s).
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
+* Metric: Accuracy and Confusion Matrix (low number of false positives and false negatives)
+
+Visualizations:
+![pcosaccuracy](https://github.com/user-attachments/assets/ca252b97-001e-4bb3-bdc0-791ce6e888f3)
+![pcosconfusionmatrix](https://github.com/user-attachments/assets/86162bfa-5186-474e-a10b-a4b397612e56)
+
+* Accuracy: 0.97 after cleaning and scaling
+* Confusion Matrix: Only 2 False Negatives and 4 False Positives (very low when compared to the 200 patient group)
 
 ### Conclusions
 
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+* The cleaned dataset enabled the KNN Classifier model to work smoothly without many changes needed.
+* Overall, the KNN Classifier Model performed well with a 97% accuracy in predicting PCOS diagnosis and minimal false negatives and false positives.
 
 ### Future Work
 
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
+* Find a larger and more diverse dataset to increase the practicality of the model (the dataset was already cleaned and it only had 1000 patients with 199 being positive for the condition).
+* Try to find a dataset with other features like Type 2 Diabetes diagnosis and Family history since these features are said to have a possible effect on PCOS diagnosis.
+* Investigate other simple models that could be applied without overfitting to the dataset.
 
 ## How to reproduce results
 
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
+To fully reproduce the results from this repository, the steps below can be followed using a locally ran notebook or a cloud-based environment.
+1. Boot up whatever software will be used to code (Ex: Jupyter Notebook or Google Collab(recommended))
+2. Import the relevant libraries/packages (Ex: pandas, numpy, matplotlib, seaborn, scikit-learn)
+3. Load the pcos_dataset.csv into the notebook as a dataframe
+4. Apply the StandardScaler to all features except for the target variable
+5. Properly declare both the features and target variable then split the data into training, testing, and validation sets
+6. Import and define the KNN Classifier model
+7. Fit the model to the training sets
+8. Make predictions on the validation set using the model and compare with the actual results
+9. Extract the accuracy score and generate a confusion matrix to ensure the model worked
 
 ### Overview of files in repository
 
-* Describe the directory structure, if any.
-* List all relavent files and describe their role in the package.
-* An example:
-  * utils.py: various functions that are used in cleaning and visualizing data.
-  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
-  * visualization.ipynb: Creates various visualizations of the data.
-  * models.py: Contains functions that build the various models.
-  * training-model-1.ipynb: Trains the first model and saves model during training.
-  * training-model-2.ipynb: Trains the second model and saves model during training.
-  * training-model-3.ipynb: Trains the third model and saves model during training.
-  * performance.ipynb: loads multiple trained models and compares results.
-  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
-
-* Note that all of these notebooks should contain enough text for someone to understand what is happening.
+* DATA3402_Final_Project_PCOS.ipynb: The final machine learning code including all relevant analysis, scaling, model training, and results.
 
 ### Software Setup
-* List all of the required packages.
-* If not standard, provide or point to instruction for installing the packages.
-* Describe how to install your package.
+
+Required Packages/Libraries:
+* pandas as pd
+* numpy as np
+* matplotlib.pyplot as plt
+* seaborn as sns
+* StandardScaler from sklearn.preprocessing
+* KNeighborsClassifier from sklearn.neighbors
+* train_test_split from sklearn.model_selection
+* accuracy_score from sklearn.metrics
+* confusion_matrix, ConfusionMatrixDisplay from sklearn.metrics
 
 ### Data
 
-* Point to where they can download the data.
-* Lead them through preprocessing steps, if necessary.
+* Found on Kaggle.com titled "PCOS Diagnosis Dataset"
+* Can be downloaded directly from the website as CSV file
+* Once downloaded, it can be uploaded to the local directory then loaded as a dataframe
+* If not, it can be imported into the notebook via kagglehub
 
 ### Training
 
-* Describe how to train the model
+* Properly define the features and target variable
+* Split the dataset into training, testing, and validation sets
+* After importing the desired machine learning model, fit it to the training sets
+* After fitting, run predictions based on the testing and validation sets then compare with the actual results
+* Extract the desired metrics to determine the effectiveness of the model
 
 #### Performance Evaluation
 
-* Describe how to run the performance evaluation.
+* To properly evaluate performance, it depends on the metrics used
+* In this repository, the metrics used are accuracy and an evaluation of a confusion matrix
+* The extracted accuracy should be as close to 1 as possible to be considered an effective model
+  * The accuracy shouldn't be too perfect either to avoid a model overfitting and memorizing the dataset
+* The confusion matrix should have values as close to 0 as possible in any box where there's a 0 and 1 intersection between the predicted and the actual
 
 
 ## Citations
 
-* Provide any references.
+* Dataset from Kaggle: https://www.kaggle.com/datasets/samikshadalvi/pcos-diagnosis-dataset?resource=download
 
 
 
