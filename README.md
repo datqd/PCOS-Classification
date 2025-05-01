@@ -78,7 +78,7 @@ Difficulties:
 ### Future Work
 
 * Find a larger and more diverse dataset to increase the practicality of the model (the dataset was already cleaned and it only had 1000 patients with 199 being positive for the condition).
-* Try to find a dataset with other features like Type 2 Diabetes diagnosis and Family history since these features are said to have a possible effect on PCOS diagnosis.
+* Try to find a dataset with other features like Type 2 Diabetes Diagnosis and Family History since these features are said to have an effect on PCOS diagnosis.
 * Investigate other simple models that could be applied without overfitting to the dataset.
 
 ## How to reproduce results
