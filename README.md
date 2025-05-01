@@ -6,10 +6,7 @@
 
 ## Overview
 
-* This section could contain a short paragraph which include the following:
-  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
-  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
-  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
+* The task for this dataset is to utilize the five features of typical symptoms or risk factors to predict PCOS diagnosis. The approach in this repository is done as a classification task, utilizing the cleaned and scaled data as the input for the KNN Classifier model and then evaluated based on accuracy. The KNN Classifier model was able to predict PCOS diagnosis with a 97% accuracy while minimizing the amount of false positives and negatives.
 
 ## Summary of Workdone
 
