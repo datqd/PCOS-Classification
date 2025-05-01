@@ -6,7 +6,7 @@
 
 ## Overview
 
-* The task for this dataset is to utilize the five features of typical symptoms or risk factors to predict PCOS diagnosis. The approach in this repository is done as a classification task, utilizing the cleaned and scaled data as the input for the KNN Classifier model and then evaluated based on accuracy. The KNN Classifier model was able to predict PCOS diagnosis with a 97% accuracy while minimizing the amount of false positives and negatives.
+* The task for this dataset is to utilize the five features of typical symptoms or risk factors to predict PCOS diagnosis. The approach in this repository is done as a classification task, utilizing the cleaned and scaled data as the input for the K-Nearest Neighbor Classifier model and then evaluated based on accuracy. The K-Nearest Neighbor Classifier model was able to predict PCOS diagnosis with a 97% accuracy while minimizing the amount of false positives and negatives.
 
 ## Summary of Workdone
 
@@ -33,11 +33,16 @@ From the visualizations, we can observe a few things:
 
 ### Problem Formulation
 
-* Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+* Input: 5 features of patient symptoms/risk factors (both quantitative and categorical)
+* Output: PCOS Diagnosis (binary)
+
+Models:
+
+* K-Nearest Neighbor Classifier- chosen due to its simplicity that works well with the dataset and its ability to make predictions based on similarities between data points.
+
+Hyperparameters:
+
+* Number of k neighbors considered for classification
 
 ### Training
 
