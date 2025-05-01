@@ -57,7 +57,7 @@ Stopping Training:
 * Training was very quick, so there was no need to intentionally stop it
 
 Difficulties:
-* The effectiveness of the KNN model is derived from the distance between data points, so without scaling the model performs very poorly on the dataset. This was solved by ensuring all features were scaled properly before training the model.
+* The effectiveness of the KNN model is derived from the distance between data points; so without scaling, the model performs very poorly on the dataset. This was solved by ensuring all features were scaled properly before training the model.
 
 ### Performance Comparison
 
