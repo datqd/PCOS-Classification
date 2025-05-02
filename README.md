@@ -12,10 +12,9 @@
 
 ### Data
 
-* Data:
-  * Type: CSV file with 4 quantitative variables, 1 categorical variable, and the target variable of PCOS diagnosis
-  * Size: 1000 rows and 6 features
-  * Instances (Train, Test, Validation Split): 600 patients for training, 200 for testing, 200 for validation
+* Type: CSV file with 4 quantitative variables, 1 categorical variable, and the target variable of PCOS diagnosis
+* Size: 1000 rows and 6 features
+* Instances (Train, Test, Validation Split): 600 patients for training, 200 for testing, 200 for validation
 
 #### Preprocessing / Clean up
 
@@ -64,7 +63,6 @@ Difficulties:
 * Metric: Accuracy and Confusion Matrix (low number of false positives and false negatives)
 * Visualizations:
 
-![pcosaccuracy](https://github.com/user-attachments/assets/ca252b97-001e-4bb3-bdc0-791ce6e888f3)
 ![pcosconfusionmatrix](https://github.com/user-attachments/assets/86162bfa-5186-474e-a10b-a4b397612e56)
 
 * Accuracy: 0.97 after cleaning and scaling
