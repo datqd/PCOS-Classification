@@ -29,6 +29,7 @@
 ![pcoshistogram](https://github.com/user-attachments/assets/a4dc1345-d638-4de9-81f6-d7d9be778f4b)
 From the visualizations, we can observe a few things:
 * Based on the histograms, all of the features are fairly uniform without any skewing
+* The menstrual irregularity feature seems to be fairly balanced
 * There's a potential issue with an imbalance between the classes in the PCOS diagnosis feature
 * Based on the boxplots, it appears that there aren't any outliers in any of the features
 
