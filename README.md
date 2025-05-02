@@ -24,6 +24,8 @@
 
 #### Data Visualization
 ![pcosfeatures](https://github.com/user-attachments/assets/a23054ca-0896-43aa-8280-6e839e6165a9)
+![menstrualtable](https://github.com/user-attachments/assets/6808104c-87c9-438f-aa5c-d32df8cacf5c)
+![pcostable](https://github.com/user-attachments/assets/72f125e1-a649-40d1-8953-e1e262adc627)
 ![pcoshistogram](https://github.com/user-attachments/assets/a4dc1345-d638-4de9-81f6-d7d9be778f4b)
 From the visualizations, we can observe a few things:
 * Based on the histograms, all of the features are fairly uniform without any skewing
